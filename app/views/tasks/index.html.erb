@@ -2,7 +2,10 @@
 <ul>
   <% @tasks.each do |task| %>
   <li>
+    <%= form_for task do |f| %>
+    <%= f.check_box :completed %>
     <%= link_to task.title, task_path(task) %>
+    <% end %>
   </li>
   <% end %>
 </ul>
