@@ -1,4 +1,7 @@
+<div class="upperbox">
 <h1><%= @task.title %></h1>
+<%= link_to "Edit this task", task_edit_path(@task), class: 'btn btn-secondary' %>
+</div>
 <p>
   <%= form_for @task do |f| %>
     <%= f.check_box :completed %>
